@@ -1,0 +1,11 @@
+1-acessar site da amazon.com
+2-logar na sua conta da amazon
+3-clicar na barra de busca
+4-digitar "macbook"
+5-pressionar enter
+6-olhar os preços dos macbooks
+7-clicar no que mais te agrada 
+8-colocar no carrinho de compra
+9-ir concluir a compra
+10-escolher metodo de pagamento 
+11-finalizar compra
