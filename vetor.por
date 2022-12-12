@@ -21,37 +21,47 @@ programa
     real media = 0
     inteiro maiorvalor= 0
     
-
-    para (inteiro i=0; i<8; i++){
-      escreva("escreva sua idade? ")
+    para (inteiro i=0; i<8; i++)
+    {
+      escreva("escreva sua idade: ")
       leia(vetor[i])
-      soma = vetor[i] + soma
+      soma = vetor[i] + soma                                                //somando os valores do vetor
     }
-    media = soma / 8
+    media = soma / 8                                                      //soma da media
     escreva("\na media de idade é de: ",media, "\n")
 
 
+
+
+
     escreva("nos idices abaixo as pessoas tem mais de 25 anos:\n")
-    para (inteiro i=0; i<8; i++){
-      se (vetor[i] > 25){
-        escreva(i + 1 , ", ")
+    para (inteiro i=0; i<8; i++)
+    {
+      se (vetor[i] > 25)                                                  //verificar se os valores sao maiores que 25
+      {                       
+        escreva(i + 1 , ", ")                                             //escrever o vetor dos valores maiores que 25
+      }
+
+
+
+      se(vetor[i]>maiorvalor)                                              //descobrir maior idade 
+      {
+        maiorvalor = vetor[i]                                              //descobrir  maior idade
       }
     }
+    escreva("\n\n a maior idade digitada é de: ", maiorvalor)
 
-    para (inteiro i=0;i<8; i++){
-      se(vetor[i]>maiorvalor){
-        maiorvalor = vetor[i]
-      }
-    }
-    escreva("\n a maior idade digitada é de: ", maiorvalor)
 
-    escreva("\n o indece de maior valor é o :")
-    para (inteiro i=0; i<8; i++){
-      se (vetor[i]== maiorvalor){
+
+    escreva("\n\n o indice que contem a maior idade é o :")
+    para (inteiro i=0; i<8; i++)
+    {
+      se (vetor[i]== maiorvalor)                                                //descobrir indice da maior idade 
+      {
         escreva(i + 1 , " ")
       }
     }
-
+    escreva("\n")
 
 
 
