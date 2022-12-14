@@ -27,7 +27,7 @@ programa
       soma = vetor[i] + soma                                                //somando os valores do vetor
     }
     media = soma / 8                                                      //soma da media
-    escreva("\na media de idade é de: ",media, "\n")
+    escreva("\na media de idade Ã© de: ",media, "\n")
 
 
 
@@ -45,11 +45,11 @@ programa
         maiorvalor = vetor[i]                                              //descobrir  maior idade
       }
     }
-    escreva("\n\n a maior idade digitada é de: ", maiorvalor)
+    escreva("\n\n a maior idade digitada Ã© de: ", maiorvalor)
 
 
 
-    escreva("\n\n o indice que contem a maior idade é o :")
+    escreva("\n\n o indice que contem a maior idade Ã© o :")
     para (inteiro i=0; i<8; i++){
       se (vetor[i]== maiorvalor){                                               //descobrir indice da maior idade 
         escreva(i + 1 , " ")
