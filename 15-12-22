@@ -183,3 +183,84 @@ programa {
   }
 
 }
+
+
+
+
+
+                                                PARA CASA
+                                                
+ programa {
+  cadeia nomeDeFilmeGlobal[5]
+  real precoDoIngressoGlobal[5]
+  cadeia sinopseFilmeGlobal[5]
+  inteiro popularidadeDoFilmeGlobal[5]
+
+  funcao perguntarNomeDeFilme(){
+    para(inteiro i=0;i<5;i++){
+      escreva("Digite o nome do filme?: ")
+      leia(nomeDeFilmeGlobal[i])
+    } 
+  }
+  funcao perguntarPrecoDoIngresso(){
+    para(inteiro i=0;i<5;i++){
+      escreva("digite o preço do filme?:  ")
+      leia(precoDoIngressoGlobal[i])
+    } 
+  }
+  funcao perguntarSinopseFilme(){
+    para(inteiro i=0;i<5;i++){
+      escreva("digite sinopse do filme:  ")
+      leia(sinopseFilmeGlobal[i])
+    } 
+  }
+  funcao mostrarTexto(){
+    para(inteiro i=0;i<5;i++){
+      escreva("\n",nomeDeFilmeGlobal[i],", ingresso R$",precoDoIngressoGlobal[i],", sinopse: ", sinopseFilmeGlobal[i],"\n")
+    } 
+  }
+
+  funcao perguntaPopularidadedoFilme(){
+    para(inteiro i=0;i<5;i++){
+      escreva("digite qualidade do filme ",nomeDeFilmeGlobal[i] ," 1-5: ")
+      leia(popularidadeDoFilmeGlobal[i])
+    } 
+  }
+
+  funcao popularidadeTexto(){
+    para(inteiro i=0;i<5;i++){
+      se(popularidadeDoFilmeGlobal[i] == 1){
+        escreva(nomeDeFilmeGlobal[i],": Muito ruim\n")
+      }
+      senao se(popularidadeDoFilmeGlobal[i] == 2){
+        escreva(nomeDeFilmeGlobal[i],": Ruim\n")
+      }
+      senao se(popularidadeDoFilmeGlobal[i] == 3){
+        escreva(nomeDeFilmeGlobal[i],": Peba\n")
+      }
+      senao se(popularidadeDoFilmeGlobal[i]==4){
+        escreva(nomeDeFilmeGlobal[i],": Bonzinho\n")
+      }
+      senao se(popularidadeDoFilmeGlobal[i]==5){
+        escreva(nomeDeFilmeGlobal[i],": Muito Bom\n")
+      }
+      senao  
+      {  
+        escreva("voce nao digitou um numero entre 1 e 5\n")
+      }  
+      
+      
+    } 
+  }
+  
+  
+
+  funcao inicio() {
+    perguntarNomeDeFilme()
+    perguntarPrecoDoIngresso()
+    perguntarSinopseFilme()
+    mostrarTexto()
+    perguntaPopularidadedoFilme()
+    popularidadeTexto()
+  }
+}
