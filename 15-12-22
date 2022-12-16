@@ -1,0 +1,185 @@
+  programa {
+    funcao retorneNumero(){
+      inteiro numero =0 
+      escreva("digite um numero: ")
+      leia(numero)
+      retorne numero
+    }
+
+    funcao inicio() {
+    escreva(retorneNumero())
+    }
+  }
+
+
+
+  programa {
+    funcao aloMundo(){
+      escreva("Alo Mundo")
+    }
+
+    funcao inicio() {
+      aloMundo()
+    }
+  }
+
+
+  programa {
+    funcao somaNum(inteiro num1,inteiro num2,inteiro num3){
+      retorne num1+num2+num3
+    }
+
+    funcao inicio() {
+      escreva("a soma dos numeros é: ",somaNum(5,5,5))
+    }
+  }
+
+
+  programa {
+    funcao repeticao(){
+      inteiro quantidade=0
+      escreva("quantas vezes deseja ?")
+      leia(quantidade)
+      para(inteiro i=0;i<quantidade;i++){
+        escreva("ola mundo\n")
+      }
+    } 
+  
+    funcao inicio() {
+      repeticao()
+    }
+  }
+
+
+/*
+  receba 5 nomes e receba a msg "bom dia (nomeGlobal), é um prazer ter voce aqui" para cada nomeGlobal 
+  baseado no anterior, receba 5 notas, em outro vetor salvar valores bool motrando se esta aprovado ou reprovado (aprov nota maior q 5)
+   */
+
+
+programa {
+ 
+  cadeia nomeGlobal[5]
+  funcao perguntarNomes(){
+    
+    para(inteiro i=0;i<5;i++){
+    escreva("qual o seu nome? ")
+    leia(nomeGlobal[i])
+    }
+    
+  }
+  funcao mensagemPadrao(){
+    para(inteiro i=0;i<5;i++){
+      escreva("Bom Dia ",nomeGlobal[i]," é um prazer ter voce aqui\n")
+    }
+  }
+
+
+  funcao inicio() {
+   perguntarNomes()
+   mensagemPadrao()
+    
+  }
+}
+
+
+
+
+
+TESTE MEU    ARRUMAR
+
+
+programa {
+
+  cadeia nomeGlobal[5]
+  real notaGlobal[5]
+  logico verdadeiroGlobal[5]
+
+
+  funcao cadeia repeticao(){
+    para(inteiro i=0;i<5;i++){
+      perguntarNomes(i)
+      perguntarNota(i)
+      aprovadoOuReprovado(i)
+      mensagemPadrao(i)
+    }
+
+  }
+
+  funcao perguntarNomes(inteiro i){  
+    escreva("qual o seu nome? ")
+    leia(nomeGlobal[i])
+
+  }
+  funcao perguntarNota(inteiro i){
+    escreva("qual a sua nota? ")
+    leia(notaGlobal[i])
+  }
+
+  funcao aprovadoOuReprovado(inteiro i){
+    se(notaGlobal[i]>=5){
+       verdadeiroGlobal[i] = verdadeiro
+    }
+    senao{
+      verdadeiroGlobal[i]= falso
+    }
+  }
+  funcao mensagemPadrao(inteiro i){
+      escreva("Bom Dia ",nomeGlobal[i]," é um prazer ter voce aqui\n")
+  }
+
+  funcao inicio() {
+    repeticao()
+  }
+}
+
+
+        MODELO PROFESSOR   ARRUMAR
+
+
+programa {
+ 
+  cadeia nomeGlobal[5]
+  inteiro notaGlobal[5]
+  logico aprovado[5]
+
+  funcao perguntarNomes(){
+    para(inteiro i=0;i<5;i++){
+      escreva("qual o seu nome? ")
+      leia(nomeGlobal[i])
+    }
+    
+  }
+  funcao perguntarNotas(){
+    para(inteiro i=0;i<5;i++){
+      escreva("qual o seu nome? ")
+      leia(notaGlobal[i])
+    }
+    
+  }
+  funcao apurando(){
+    para(inteiro i=0;i<5;i++){
+      se(aprovado[i]>=5){
+        aprovador[i]= verdadeiro
+      }
+      senao(){
+        (aprovado[i]<5)
+        aprovador[i]= falso
+      }
+    }
+  }
+  funcao mensagemPadrao(){
+    para(inteiro i=0;i<5;i++){
+      escreva("Bom Dia ",nomeGlobal[i]," é um prazer ter voce aqui\n")
+    }
+  }
+
+
+  funcao inicio(){
+   perguntarNomes()
+   mensagemPadrao()
+   apurando()
+   mensagemPadrao()
+  }
+
+}
