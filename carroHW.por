@@ -1,14 +1,14 @@
 /*
-Obtenha o nome de 5 carros, o preço é o ano. Use um vetor para cada informação. Use funções para cada vetor, ao final preciso que para cada veículo, informe:
+Obtenha o nome de 5 carros, o preÃ§o Ã© o ano. Use um vetor para cada informaÃ§Ã£o. Use funÃ§Ãµes para cada vetor, ao final preciso que para cada veÃ­culo, informe:
 
-O nome do veículo, o preço, o ano...
+O nome do veÃ­culo, o preÃ§o, o ano...
 Na mesma linha da mensagem, preciso que verifiquem:
-Se o carro for anterior a 2022 digite seminovo, caso contrário digite: 0 km.
+Se o carro for anterior a 2022 digite seminovo, caso contrÃ¡rio digite: 0 km.
 
 Um exemplo de como ficaria a mensagem final para cada carro:
 
 Argo, R$ 30000, 2019, seminovo
-Corolla, R$ 60000, 2022, 0km
+Corolla, R$ 60000,Â 2022,Â 0km
 */
 
 programa {
@@ -38,7 +38,7 @@ programa {
   }
 
   funcao perguntarPreco(inteiro i){
-    escreva("Qual o preço do carro ", i+1," ?\n")
+    escreva("Qual o preÃ§o do carro ", i+1," ?\n")
     leia(precoCarroGlobal[i])
   }
 
