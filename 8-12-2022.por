@@ -1,12 +1,12 @@
 programa {
   funcao inicio() {
     /*        //EXERCICIO 1
-    escreva("ol·,mundo")*/
+    escreva("ol√°,mundo")*/
    /*          //EXERCICIO 2
     cadeia nome
-    escreva("Qual È o seu nome?", nome)
+    escreva("Qual √© o seu nome?", nome)
     leia(nome)
-    escreva("Ol· ",nome," È um prazer te conhecer!")*/
+    escreva("Ol√° ",nome," √© um prazer te conhecer!")*/
 
     /*           \\ EXERCICIO 3
     real salario
@@ -16,7 +16,7 @@ programa {
     escreva("qual o seu salario?")
     leia(salario)
 
-    escreva("O funcion·rio ",nome, "tem um sal·rio de R$",salario, " em Junho.")
+    escreva("O funcion√°rio ",nome, "tem um sal√°rio de R$",salario, " em Junho.")
     */
     
      /*                  // EXERCICIO 4
@@ -29,7 +29,7 @@ programa {
      escreva("digite o segundo valor:")
      leia(numbdois)
     numbsoma=numbdois+numbum
-    escreva("a soma entre ",numbum, " e ",numbdois," È: ",numbsoma) */
+    escreva("a soma entre ",numbum, " e ",numbdois," √©: ",numbsoma) */
 
 
 
@@ -47,7 +47,7 @@ programa {
      leia(numbdois)
     numbsoma=numbdois+numbum
     numbresult= numbsoma/2
-    escreva("a media È : ",numbresult)    */
+    escreva("a media √© : ",numbresult)    */
 
 
 
@@ -59,9 +59,9 @@ programa {
     escreva("digite um numero:")
     leia(numbum)
 
-    escreva("O antecessor de ",numbum, " È: ",numbum-1)
+    escreva("O antecessor de ",numbum, " √©: ",numbum-1)
   
-    escreva("\nO sucessor de ",numbum, " È: ",numbum+1) */
+    escreva("\nO sucessor de ",numbum, " √©: ",numbum+1) */
 
      
      /*        // EXERCICIO 7
@@ -70,9 +70,9 @@ programa {
     escreva("digite um numero:")
     leia(numbum)
 
-    escreva("O antecessor de ",numbum, " È: ",numbum*2)
+    escreva("O antecessor de ",numbum, " √©: ",numbum*2)
   
-    escreva("\nO sucessor de ",numbum, " È: ",numbum/3) */
+    escreva("\nO sucessor de ",numbum, " √©: ",numbum/3) */
 
 
      /*                   //EXERCICIO 8
@@ -94,13 +94,13 @@ programa {
     mm = numbum*1000
     dm = numbum*10
 
-    escreva("",numbum, " metros em km È:",km)
-    escreva("\t\t\t\t\t\t",numbum, " metros em cm È:",cm)
-    escreva("\t\t\t\t\t\t",numbum, " metros em dm È:",dm)
+    escreva("",numbum, " metros em km √©:",km)
+    escreva("\t\t\t\t\t\t",numbum, " metros em cm √©:",cm)
+    escreva("\t\t\t\t\t\t",numbum, " metros em dm √©:",dm)
     
-    escreva("\n\n",numbum, " metros em hm È:",hm)
-    escreva("\t\t\t\t\t\t\t",numbum, " metros em dam È:",dam)
-    escreva("\t\t\t\t\t\t\t",numbum, " metros em mm È:",mm)
+    escreva("\n\n",numbum, " metros em hm √©:",hm)
+    escreva("\t\t\t\t\t\t\t",numbum, " metros em dam √©:",dam)
+    escreva("\t\t\t\t\t\t\t",numbum, " metros em mm √©:",mm)
     escreva("\n")
     */
 
