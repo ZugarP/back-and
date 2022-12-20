@@ -1,0 +1,54 @@
+programa {
+
+  inclua biblioteca Util --> u
+  inteiro matrizGlobal[6][6]
+
+  funcao atribuirValor(){
+    para(inteiro i=0;i<6;i++){
+      para(inteiro j=0;j<6;j++){
+        matrizGlobal[i][j] = u.sorteia(1,5)
+        
+      }  
+    }  
+  }
+
+  funcao lerMatriz(){
+    para(inteiro i=0;i<6;i++){
+      escreva("\n")
+      para(inteiro j=0;j<6;j++){
+        escreva("\t")
+        escreva(matrizGlobal[i][j])
+      }
+    }
+    escreva("\n\n")
+  }
+  funcao comparacao(){
+    para(inteiro i=0;i<6;i++){
+      para(inteiro j=0;j<6;j++){
+        se(matrizGlobal[i][j]==1){
+          escreva("na posição ",i+1,",",j+1," tem o numero 1\n")
+        }
+        senao se(matrizGlobal[i][j]==2){
+          escreva("na posição ",i+1,",",j+1," tem o numero 2\n")
+        }
+        senao se(matrizGlobal[i][j]==3){
+          escreva("na posição ",i+1,",",j+1," tem o numero 3\n")
+        }
+        senao se(matrizGlobal[i][j]==4){
+          escreva("na posição ",i+1,",",j+1," tem o numero 4\n")
+        }
+        senao se(matrizGlobal[i][j]==5){
+          escreva("na posição ",i+1,",",j+1," tem o numero 5\n")
+        }
+        
+      }
+    }
+  }
+
+  funcao inicio() {
+    atribuirValor()
+    lerMatriz()
+    comparacao()
+    
+  }
+}
