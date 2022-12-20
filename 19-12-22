@@ -1,0 +1,14 @@
+programa {
+  inclua biblioteca Util 
+  inteiro matrizGlobal[5][5]
+
+  funcao inicio() {
+    para(inteiro i=0 ;i<5 ;i++){
+      escreva("\n")
+      para(inteiro j=0 ;j<5 ;j++){
+        matrizGlobal[i][j]= Util.sorteia(0,1)
+        escreva("\t\t",matrizGlobal[i][j])
+      }
+    }
+  }
+}
