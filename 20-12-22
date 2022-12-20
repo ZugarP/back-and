@@ -1,3 +1,4 @@
+                                        homework
 programa {
 
   inclua biblioteca Util --> u
@@ -50,5 +51,52 @@ programa {
     lerMatriz()
     comparacao()
     
+  }
+}
+
+
+
+
+
+
+                                      aula
+
+
+
+
+programa {
+
+  inclua biblioteca Util --> u
+  inteiro matrizGlobal[5][5]
+
+  funcao atribuirValor(){
+    para(inteiro i=0;i<5;i++){
+      para(inteiro j=0;j<5;j++){
+        matrizGlobal[i][j] = 0
+        alteracaoMatriz(i,j)
+      }  
+    }  
+  }
+  funcao alteracaoMatriz(inteiro i, inteiro j){
+    se(4-i == j ou i == j){matrizGlobal[i][j]=1}
+  }
+
+  funcao lerMatriz(){
+    para(inteiro i=0;i<5;i++){
+      escreva("\n")
+      para(inteiro j=0;j<5;j++){
+        escreva("\t\t")
+        escreva(matrizGlobal[i][j])
+      }
+    }
+    escreva("\n\n")
+  }
+
+
+  funcao inicio() {
+    atribuirValor()
+    lerMatriz()
+    
+     
   }
 }
