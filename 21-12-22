@@ -1,0 +1,95 @@
+programa {
+  funcao enquantoTxt (){
+    inteiro i
+    logico parar = verdadeiro
+    
+    enquanto (parar){
+      escreva("\ndigite entre 0-3 para continuar\n")
+      leia(i)
+      se(i==0){
+        parar=falso
+        escreva("\t\tvoce escolheu sair\n")
+      }
+
+      senao se(i==1){
+        escreva("\t\tBem Vindo \n")
+      }
+
+      senao se(i==2){
+        escreva("\t\tBom almoço \n")
+      }
+
+      senao se(i==3){
+        escreva("\t\tBom Descaço \n")
+      }
+
+      senao{
+        escreva("\t\tpor favor digite entre 0-3\n")
+      }
+      
+    }
+  }
+  funcao inicio() {
+    enquantoTxt()
+  }
+}
+
+
+
+
+
+
+
+
+__________________________________________________________________
+programa {
+  inteiro matrix[2][2]
+  inteiro l=0
+  inteiro c=0
+  inteiro valor=0
+  logico sair = verdadeiro
+  
+
+
+
+
+
+
+  funcao pegarValores(){
+    enquanto(sair){
+      escreva("\n\ndigite a linha que deseja acessar: ")
+        leia(l)
+      se(l==100) {
+        sair=falso
+        }
+      escreva("digite a coluna que deseja acessar: ")
+        leia(c)
+      se( c==100){
+        sair=falso
+        }
+      escreva("digite o valor  que deseja: ")
+        leia(valor)
+        matrix[c][l]=valor
+      se(valor ==100){
+        sair=falso
+
+      }
+      loop()
+    }
+  }
+
+funcao loop(){
+para(inteiro i =0;i<2;i++){
+    escreva("\n")
+    para(inteiro j=0;j<2;j++){
+      escreva("\t")
+      escreva( matrix[i][j])
+    }
+   }
+}
+  
+  funcao inicio() {
+   pegarValores()
+
+  }
+}
