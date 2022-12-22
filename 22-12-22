@@ -49,3 +49,144 @@ programa {
     paraRodar()
   }
 }
+
+
+
+
+
+
+                                    ARRUMAR DEU VELHA 
+
+
+programa {
+  cadeia matrix[3][3]={{" "," "," "},{" "," "," "},{" "," "," "}}
+  inteiro l=0
+  inteiro c=0
+  cadeia valor="x"
+  logico sair = verdadeiro
+  
+
+  funcao pegarValores(){
+    enquanto(sair){
+
+      escreva("\n\ndigite a linha que deseja acessar: ")
+        leia(l)
+   
+      escreva("digite a coluna que deseja acessar: ")
+        leia(c)
+     
+      escreva("digite o valor  que deseja: ")
+        leia(valor)
+        matrix[l][c]=valor
+      
+      loop()
+      verificarXGanhador()
+      verificarOGanhador()
+    }
+  }
+
+  funcao loop(){
+    para(inteiro i =0;i<3;i++){
+      escreva("\n")
+      para(inteiro j=0;j<3;j++){
+        escreva("\t")
+        escreva( matrix[i][j])
+      
+      }
+    }
+  }
+  funcao verificarXGanhador(){
+    // verificar linhas ganhadoras
+    se(((matrix[0][0] == matrix[0][1]) e(matrix [0][1]== matrix[0][2])e (matrix[0][2]!=" ")e (matrix[0][2]== "x")){
+      escreva("voce ganhou")
+      sair=falso
+    }
+    senao se(((matrix[1][0] == matrix[1][1]) e(matrix [1][1]== matrix[1][2])e(matrix[1][2] !=" ")e (matrix[1][2]== "x")){
+      escreva("voce ganhou")
+      sair=falso
+    }
+    senao se((matrix[2][0] == matrix[2][1]) e(matrix [2][1]== matrix[2][2])e(matrix[2][2]  !=" ")e (matrix[2][2]== "x")){
+      escreva("voce ganhou")
+      sair=falso
+    }
+
+    // verificar colunas ganhadoras
+
+    senao se((matrix[0][0] == matrix[1][0]) e(matrix [1][0]== matrix[2][0])e (matrix[2][0]!=" ")e (matrix[2][0]== "x")){
+      escreva("voce ganhou")
+      sair=falso
+    }
+   senao se((matrix[0][1] == matrix[1][1]) e(matrix [1][1]== matrix[2][1])e(matrix[2][1] !=" ")e (matrix[2][1]== "x")){
+      escreva("voce ganhou")
+      sair=falso
+    }
+   senao se((matrix[0][2] == matrix[1][2]) e(matrix [1][2]== matrix[2][2])e(matrix[2][2] !=" ")e (matrix[2][2]== "x")){
+      escreva("voce ganhou")
+      sair=falso
+    }
+
+    // verificar X ganhadores
+    senao se((matrix[0][0] == matrix[1][1]) e(matrix [1][1]== matrix[2][2])e (matrix[2][2] !=" ")e (matrix[2][2]== "x")){
+      escreva("voce ganhou")
+      sair=falso
+    }
+    senao se((matrix[2][0] == matrix[1][1]) e(matrix [1][1] == matrix[0][2]) e (matrix[0][2] != " ")e (matrix[0][2]== "x")){
+      escreva("voce ganhou")
+      sair=falso
+    }
+  
+   
+
+  }
+  funcao verificarOGanhador(){
+    // verificar linhas ganhadoras
+    se(((matrix[0][0] == matrix[0][1]) e(matrix [0][1]== matrix[0][2])e (matrix[0][2]!=" ")e (matrix[0][2]== "o")){
+      escreva("voce ganhou")
+      sair=falso
+    }
+    senao se(((matrix[1][0] == matrix[1][1]) e(matrix [1][1]== matrix[1][2])e(matrix[1][2] !=" ")e (matrix[1][2]== "o")){
+      escreva("voce ganhou")
+      sair=falso
+    }
+    senao se((matrix[2][0] == matrix[2][1]) e(matrix [2][1]== matrix[2][2])e(matrix[2][2]  !=" ")e (matrix[2][2]== "o")){
+      escreva("voce ganhou")
+      sair=falso
+    }
+
+    // verificar colunas ganhadoras
+
+    senao se((matrix[0][0] == matrix[1][0]) e(matrix [1][0]== matrix[2][0])e (matrix[2][0]!=" ")e (matrix[2][0]== "o")){
+      escreva("voce ganhou")
+      sair=falso
+    }
+   senao se((matrix[0][1] == matrix[1][1]) e(matrix [1][1]== matrix[2][1])e(matrix[2][1] !=" ")e (matrix[2][1]== "o")){
+      escreva("voce ganhou")
+      sair=falso
+    }
+   senao se((matrix[0][2] == matrix[1][2]) e(matrix [1][2]== matrix[2][2])e(matrix[2][2] !=" ")e (matrix[2][2]== "o")){
+      escreva("voce ganhou")
+      sair=falso
+    }
+
+    // verificar X ganhadores
+    senao se((matrix[0][0] == matrix[1][1]) e(matrix [1][1]== matrix[2][2])e (matrix[2][2] !=" ")e (matrix[2][2]== "o")){
+      escreva("voce ganhou")
+      sair=falso
+    }
+    senao se((matrix[2][0] == matrix[1][1]) e(matrix [1][1] == matrix[0][2]) e (matrix[0][2] != " ")e (matrix[0][2]== "o")){
+      escreva("voce ganhou")
+      sair=falso
+    }
+  
+   
+
+  }
+  funcao deuVelha(){
+    se(verificarOGanhador() e verificarXGanhador() == falso)
+  }
+
+  funcao inicio() {
+   pegarValores()
+
+  }
+}
