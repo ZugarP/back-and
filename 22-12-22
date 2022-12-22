@@ -1,0 +1,51 @@
+                                    arrumar
+programa {
+
+  inteiro coluna
+  inteiro linha
+  cadeia nome
+  cadeia matriz[2][2] = {{" "," "},{" "," "}}
+  logico sair = verdadeiro
+  cadeia valorSair
+
+  funcao loopTxt(){
+    enquanto(sair){
+      escreva("digite a linha: ")
+        leia(linha)
+      escreva("digite a coluna: ")
+        leia(coluna)
+      escreva("digite o nome: ")
+        leia(nome)
+        matriz[linha][coluna] = nome
+        
+      escreva("deseja continuar ? (s/n): ")
+        leia(valorSair)
+      se(valorSair == "n"){
+        sair = falso
+      }
+    }
+  }
+
+  funcao paraRodar(){
+    loopTxt()
+    para(inteiro i=0;i<2;i++){
+      escreva("\n")
+      para(inteiro j=0;j<2;j++){
+        se(matriz[i][j] == " "){
+          matriz[i][j] == "x"
+        }
+        senao{
+        escreva(matriz[i][j])
+        escreva("\t\t")
+        }
+        
+      }
+    }
+    
+  }
+
+  funcao inicio() {
+    
+    paraRodar()
+  }
+}
