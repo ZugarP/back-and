@@ -132,4 +132,48 @@ programa {
 
 _______________________________________________________________________
 
+programa {
+
+  logico sair=verdadeiro
+  cadeia matriz [2][2]
+  cadeia nome
+  cadeia continua = "s"
+  inteiro linha 
+  inteiro coluna
+
+  funcao perguntar(){
+    enquanto(sair){
+      escreva("digite seu nome: ")
+      leia(nome)
+      escreva("digite linha: ")
+      leia(linha)
+      escreva("digite coluna: ")
+      leia(coluna)
+      atribuir()
+       escreva("deseja continuar ? (s/n): ")
+      leia(continua)
+      se(continua == "n"){
+        sair = falso
+        
+      }
+    }
+  }
+  funcao atribuir(){
+    matriz[linha][coluna]=nome
+  }
+  funcao loop(){
+    para(inteiro i=0;i<2;i++){
+      escreva("\n")
+      para(inteiro j=0;j<2;j++){
+        escreva(matriz[i][j])
+        escreva("\t")
+      }
+    }
+  }
+
+  funcao inicio() {
+    perguntar()
+    loop()
+  }
+}
 
