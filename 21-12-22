@@ -93,3 +93,43 @@ para(inteiro i =0;i<2;i++){
 
   }
 }
+
+
+
+
+__________________________________________________-----
+programa {
+
+  logico sair=verdadeiro
+  cadeia nome
+  cadeia sobrenome
+  inteiro telefone
+  cadeia continua = "s"
+
+  funcao perguntar(){
+    enquanto(sair){
+      escreva("digite seu nome: ")
+      leia(nome)
+      escreva("digite seu sobrenome: ")
+      leia(sobrenome)
+      escreva("digite seu telefone: ")
+      leia(telefone)
+       escreva("deseja continuar ? (s/n): ")
+      leia(continua)
+      se(continua == "n"){
+        sair = falso
+
+        escreva("\n",nome,"\n",sobrenome,"\n",telefone,"\n")
+        
+      }
+    }
+  }
+
+  funcao inicio() {
+    perguntar()
+  }
+}
+
+_______________________________________________________________________
+
+
