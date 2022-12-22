@@ -177,3 +177,47 @@ programa {
   }
 }
 
+_______________________________________________________________________________________
+programa {
+  cadeia matrix[3][3]
+  inteiro l=0
+  inteiro c=0
+  cadeia valor="x"
+  logico sair = verdadeiro
+  
+
+  funcao pegarValores(){
+    enquanto(sair){
+
+      escreva("\n\ndigite a linha que deseja acessar: ")
+        leia(l)
+   
+      escreva("digite a coluna que deseja acessar: ")
+        leia(c)
+     
+      escreva("digite o valor  que deseja: ")
+        leia(valor)
+        matrix[l][c]=valor
+      se(valor == "q"){
+        sair=falso
+
+      }
+      loop()
+    }
+  }
+
+funcao loop(){
+para(inteiro i =0;i<3;i++){
+    escreva("\n")
+    para(inteiro j=0;j<3;j++){
+      escreva("\t")
+      escreva( matrix[i][j])
+    }
+   }
+}
+  
+  funcao inicio() {
+   pegarValores()
+
+  }
+}
