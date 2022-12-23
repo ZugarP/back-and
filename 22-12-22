@@ -1,4 +1,3 @@
-                                    arrumar
 programa {
 
   inteiro coluna
@@ -32,30 +31,19 @@ programa {
       escreva("\n")
       para(inteiro j=0;j<2;j++){
         se(matriz[i][j] == " "){
-          matriz[i][j] == "x"
+          matriz[i][j] = "x"
         }
-        senao{
         escreva(matriz[i][j])
         escreva("\t\t")
-        }
+        
         
       }
     }
     
   }
 
-  funcao inicio() {
-    
-    paraRodar()
-  }
-}
+                                    JOGO DA VELHA
 
-
-
-
-
-
-                                    ARRUMAR DEU VELHA 
 
 
 programa {
@@ -82,6 +70,7 @@ programa {
       loop()
       verificarXGanhador()
       verificarOGanhador()
+      
     }
   }
 
@@ -97,93 +86,71 @@ programa {
   }
   funcao verificarXGanhador(){
     // verificar linhas ganhadoras
-    se(((matrix[0][0] == matrix[0][1]) e(matrix [0][1]== matrix[0][2])e (matrix[0][2]!=" ")e (matrix[0][2]== "x")){
-      escreva("voce ganhou")
-      sair=falso
-    }
-    senao se(((matrix[1][0] == matrix[1][1]) e(matrix [1][1]== matrix[1][2])e(matrix[1][2] !=" ")e (matrix[1][2]== "x")){
-      escreva("voce ganhou")
-      sair=falso
-    }
-    senao se((matrix[2][0] == matrix[2][1]) e(matrix [2][1]== matrix[2][2])e(matrix[2][2]  !=" ")e (matrix[2][2]== "x")){
-      escreva("voce ganhou")
-      sair=falso
-    }
+    para(inteiro i=0;i<3;i++){
+      se(((matrix[i][0] == matrix[i][1]) e(matrix [i][1]== matrix[i][2])e (matrix[i][2]!=" ")e (matrix[i][2]== "x")){
+        escreva("\n X ganhou")
+        sair=falso
+      
+      }
+    
 
     // verificar colunas ganhadoras
 
-    senao se((matrix[0][0] == matrix[1][0]) e(matrix [1][0]== matrix[2][0])e (matrix[2][0]!=" ")e (matrix[2][0]== "x")){
-      escreva("voce ganhou")
-      sair=falso
-    }
-   senao se((matrix[0][1] == matrix[1][1]) e(matrix [1][1]== matrix[2][1])e(matrix[2][1] !=" ")e (matrix[2][1]== "x")){
-      escreva("voce ganhou")
-      sair=falso
-    }
-   senao se((matrix[0][2] == matrix[1][2]) e(matrix [1][2]== matrix[2][2])e(matrix[2][2] !=" ")e (matrix[2][2]== "x")){
-      escreva("voce ganhou")
-      sair=falso
+      senao se((matrix[0][i] == matrix[1][i]) e(matrix [1][i]== matrix[2][i])e (matrix[2][i]!=" ")e (matrix[2][i]== "x")){
+        escreva("\n X ganhou")
+        sair=falso
+        
+      }
     }
 
     // verificar X ganhadores
     senao se((matrix[0][0] == matrix[1][1]) e(matrix [1][1]== matrix[2][2])e (matrix[2][2] !=" ")e (matrix[2][2]== "x")){
-      escreva("voce ganhou")
+      escreva("\n X ganhou")
       sair=falso
+      
     }
     senao se((matrix[2][0] == matrix[1][1]) e(matrix [1][1] == matrix[0][2]) e (matrix[0][2] != " ")e (matrix[0][2]== "x")){
-      escreva("voce ganhou")
+      escreva("\n X ganhou")
       sair=falso
+      
     }
   
    
 
   }
   funcao verificarOGanhador(){
-    // verificar linhas ganhadoras
-    se(((matrix[0][0] == matrix[0][1]) e(matrix [0][1]== matrix[0][2])e (matrix[0][2]!=" ")e (matrix[0][2]== "o")){
-      escreva("voce ganhou")
-      sair=falso
-    }
-    senao se(((matrix[1][0] == matrix[1][1]) e(matrix [1][1]== matrix[1][2])e(matrix[1][2] !=" ")e (matrix[1][2]== "o")){
-      escreva("voce ganhou")
-      sair=falso
-    }
-    senao se((matrix[2][0] == matrix[2][1]) e(matrix [2][1]== matrix[2][2])e(matrix[2][2]  !=" ")e (matrix[2][2]== "o")){
-      escreva("voce ganhou")
-      sair=falso
-    }
+   para(inteiro i=0;i<3;i++){
+      se(((matrix[i][0] == matrix[i][1]) e(matrix [i][1]== matrix[i][2])e (matrix[i][2]!=" ")e (matrix[i][2]== "o")){
+        escreva("\n O ganhou")
+        sair=falso
+      
+      }
+    
 
     // verificar colunas ganhadoras
 
-    senao se((matrix[0][0] == matrix[1][0]) e(matrix [1][0]== matrix[2][0])e (matrix[2][0]!=" ")e (matrix[2][0]== "o")){
-      escreva("voce ganhou")
-      sair=falso
-    }
-   senao se((matrix[0][1] == matrix[1][1]) e(matrix [1][1]== matrix[2][1])e(matrix[2][1] !=" ")e (matrix[2][1]== "o")){
-      escreva("voce ganhou")
-      sair=falso
-    }
-   senao se((matrix[0][2] == matrix[1][2]) e(matrix [1][2]== matrix[2][2])e(matrix[2][2] !=" ")e (matrix[2][2]== "o")){
-      escreva("voce ganhou")
-      sair=falso
+      senao se((matrix[0][i] == matrix[1][i]) e(matrix [1][i]== matrix[2][i])e (matrix[2][i]!=" ")e (matrix[2][i]== "o")){
+        escreva("\n O ganhou")
+        sair=falso
+        
+      }
     }
 
     // verificar X ganhadores
     senao se((matrix[0][0] == matrix[1][1]) e(matrix [1][1]== matrix[2][2])e (matrix[2][2] !=" ")e (matrix[2][2]== "o")){
-      escreva("voce ganhou")
+      escreva("\n O ganhou")
       sair=falso
+      
     }
     senao se((matrix[2][0] == matrix[1][1]) e(matrix [1][1] == matrix[0][2]) e (matrix[0][2] != " ")e (matrix[0][2]== "o")){
-      escreva("voce ganhou")
+      escreva("\n O ganhou")
       sair=falso
+     
     }
-  
+    
    
-
   }
-  funcao deuVelha(){
-    se(verificarOGanhador() e verificarXGanhador() == falso)
-  }
+  
 
   funcao inicio() {
    pegarValores()
