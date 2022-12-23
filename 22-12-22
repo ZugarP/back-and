@@ -78,9 +78,11 @@ programa {
     para(inteiro i =0;i<3;i++){
       escreva("\n")
       para(inteiro j=0;j<3;j++){
-        escreva("\t")
-        escreva( matrix[i][j])
-      
+        se(matrix[i][j] == " "){
+          matrix[i][j] = "*"
+        }
+        escreva(matrix[i][j])
+        escreva("\t\t")
       }
     }
   }
